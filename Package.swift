@@ -10,6 +10,9 @@ let package = Package(
         .target(
             name: "secp256k1",
             path: ".",
+            exclude: [
+                "src/valgrind_ctime_text.c"
+            ],
             sources: [
                 ".",
                 "src/",
