@@ -10,7 +10,13 @@ let package = Package(
         .target(
             name: "secp256k1",
             path: ".",
-            sources: ["src/secp256k1.c"],
+            sources: [
+                ".",
+                "src/",
+                "src/asm",
+                "src/modules/ecdh",
+                "src/modules/recovery"
+            ],
             publicHeadersPath: "include",
             cSettings: [
                 .headerSearchPath("src"),
